@@ -25,12 +25,12 @@ public class CodeWars {
         System.out.println(sortDesc(0));
         System.out.println(sortDesc(146782379));
         System.out.println("============================================");
-//        System.out.println(reverseWords("zdarova hello privet"));
-//        System.out.println(setAlarm(true, true));
-//        System.out.println(setAlarm(false, false));
-//        System.out.println(setAlarm(false, true));
-//        System.out.println(setAlarm(true, false));
-//        System.out.println("10".compareTo("9"));
+        System.out.println(reverseWords("zdarova hello privet"));
+        System.out.println(setAlarm(true, true));
+        System.out.println(setAlarm(false, false));
+        System.out.println(setAlarm(false, true));
+        System.out.println(setAlarm(true, false));
+        System.out.println("10".compareTo("9"));
     }
 
     /**
