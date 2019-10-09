@@ -1,36 +1,74 @@
 package main;
 
-import java.util.ArrayList;
-import java.util.Collections;
+import java.util.*;
+import java.util.stream.Collectors;
 
 public class CodeWars {
-    private String firstName;
-    private String lastName;
-    private String fullName;
 
-    public String getFirstName() {
-        return firstName;
+    public static void method(int[] arr) {
+        arr = new int[5];
+        System.out.println(arr.length);
     }
 
-    public String getLastName() {
-        return lastName;
-    }
-
-    public String getFullName() {
-        return fullName;
+    public static void method1(int i) {
+        i++;
     }
 
     public static void main(String[] args) {
-        System.out.println(4123489 % 10);
-        System.out.println(sortDesc(0));
-        System.out.println(sortDesc(146782379));
-        System.out.println("============================================");
-        System.out.println(reverseWords("zdarova hello privet"));
-        System.out.println(setAlarm(true, true));
-        System.out.println(setAlarm(false, false));
-        System.out.println(setAlarm(false, true));
-        System.out.println(setAlarm(true, false));
-        System.out.println("10".compareTo("9"));
+
+//        int[] arr = new int[10];
+//        arr = new int[5];
+//        System.out.println(arr.length);
+//        method(arr);
+//        System.out.println(arr.length);
+//
+//        int i = 6;
+//        method1(i);
+//        System.out.println(i);
+
+        List<Integer> list = new ArrayList<>();
+
+        list.add(6);
+        list.add(98);
+        list.add(-5);
+        list.add(1234);
+        list.add(223);
+
+
+        System.out.println(list.toString());
+
+        (Object
+                .class).toString();
+
+        //list.sort((integer, t1) -> 0);
+
+
+//        list.sort((i1, i2) -> {
+//            if (i1 > i2) {
+//                return 1;
+//            } else if (i1 < i2) {
+//                return -1;
+//            } else {
+//                return 0;
+//            }
+//        });
+
+//        System.out.println(list);
+//        System.out.println("====================================");
+//
+//        System.out.println(list.stream().map(i -> i * 2).collect(Collectors.toList()));
+//
+//        System.out.println(list.stream().filter(a -> a % 2 != 0).collect(Collectors.toList()));
+//
+//        System.out.println(list.stream().reduce((acc, i) -> acc * i));
+//
+//        System.out.println("sum:");
+//        System.out.println(list.stream().mapToInt(i -> i).sum());
+//
+//        System.out.println(list.stream().reduce((acc, i) -> acc + i));
+//
+//        System.out.println("====================================");
+//        list.forEach(System.out::println);
     }
 
     /**
@@ -60,7 +98,7 @@ public class CodeWars {
      * Kata: Will there be enough space?
      * level: 8kyu
      */
-    public static int enough(int cap, int on, int wait){
+    public static int enough(int cap, int on, int wait) {
         int result = cap - on - wait;
         return result > 0 ? 0 : result * -1;
     }
@@ -69,7 +107,7 @@ public class CodeWars {
      * Kata: Count the Monkeys!
      * level: 8kyu
      */
-    public static int[] monkeyCount(final int n){
+    public static int[] monkeyCount(final int n) {
         int[] arr = new int[n];
         for (int i = 0; i < arr.length; i++) {
             arr[i] = i + 1;
@@ -92,7 +130,7 @@ public class CodeWars {
      * Kata: Sum of positive
      * level: 8kyu
      */
-    public static int sum(int[] arr){
+    public static int sum(int[] arr) {
         int res = 0;
         for (int i : arr) {
             if (i > 0) {
@@ -138,7 +176,7 @@ public class CodeWars {
      * Kata: Reversed Words
      * level: 8kyu
      */
-    public static String reverseWords(String str){
+    public static String reverseWords(String str) {
         String[] arr = str.split(" ");
         StringBuilder result = new StringBuilder();
         for (int i = arr.length - 1; i > -1; i--) {
